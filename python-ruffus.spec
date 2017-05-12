@@ -3,13 +3,14 @@
 Summary:	Python Computational Pipeline Mgmt
 Name:		python-ruffus
 Version:	2.6.3
-Release:	1
+Release:	2
 Source0:	http://pybrary.net/%{module}/%{module}-%{version}.tar.gz
 License:	BSD
 Group:		Development/Python
 Url:		http://pybrary.net/pyPdf/
 Provides:	%{module}
 BuildRequires:	python-devel
+BuildRequires:	python-setuptools
 BuildArch:	noarch
 
 %description
