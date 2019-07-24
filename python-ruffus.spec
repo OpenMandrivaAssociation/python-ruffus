@@ -2,9 +2,9 @@
 
 Summary:	Python Computational Pipeline Mgmt
 Name:		python-ruffus
-Version:	2.6.3
-Release:	2
-Source0:	http://pybrary.net/%{module}/%{module}-%{version}.tar.gz
+Version:	2.8.1
+Release:	1
+Source0:	https://files.pythonhosted.org/packages/18/24/05e8fe590d08bd9e6122c6a87425ff741c79edf01d2873f92028e860e547/ruffus-2.8.1.tar.gz
 License:	BSD
 Group:		Development/Python
 Url:		http://pybrary.net/pyPdf/
