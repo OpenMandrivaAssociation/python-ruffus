@@ -7,7 +7,7 @@ Release:	1
 Source0:	https://files.pythonhosted.org/packages/a1/73/cc66b80cfd495d6ce1e26292776d8f6bb67281bde4f47826b6cb20aa9c87/ruffus-2.8.3.tar.gz
 License:	BSD
 Group:		Development/Python
-Url:		http://pybrary.net/pyPdf/
+Url:		https://pybrary.net/pyPdf/
 Provides:	%{module}
 BuildRequires:	python-devel
 BuildRequires:	python-setuptools
