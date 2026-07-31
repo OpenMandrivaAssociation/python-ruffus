@@ -2,9 +2,9 @@
 
 Summary:	Python Computational Pipeline Mgmt
 Name:		python-ruffus
-Version:	2.8.3
+Version:	2.8.4
 Release:	1
-Source0:	https://files.pythonhosted.org/packages/a1/73/cc66b80cfd495d6ce1e26292776d8f6bb67281bde4f47826b6cb20aa9c87/ruffus-2.8.3.tar.gz
+Source0:	https://files.pythonhosted.org/packages/a1/73/cc66b80cfd495d6ce1e26292776d8f6bb67281bde4f47826b6cb20aa9c87/ruffus-2.8.4.tar.gz
 License:	BSD
 Group:		Development/Python
 Url:		https://pybrary.net/pyPdf/
@@ -34,7 +34,7 @@ multiple genome data sets.
 #--------------------------------------------------------------------
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n ruffus-2.8.4
 
 %build
 
