@@ -1,44 +1,31 @@
 %define module	ruffus
 
-Summary:	Python Computational Pipeline Mgmt
+Summary:	Python computational pipeline management
 Name:		python-ruffus
-Version:	2.8.4
+Version:	3.0.0
 Release:	1
-Source0:	https://files.pythonhosted.org/packages/a1/73/cc66b80cfd495d6ce1e26292776d8f6bb67281bde4f47826b6cb20aa9c87/ruffus-2.8.4.tar.gz
-License:	BSD
+License:	MIT
 Group:		Development/Python
-Url:		https://pybrary.net/pyPdf/
+Url:		https://pypi.org/project/ruffus/
+Source0:	https://files.pythonhosted.org/packages/source/r/ruffus/ruffus-%{version}.tar.gz
 Provides:	%{module}
-BuildRequires:	python-devel
-BuildRequires:	python-setuptools
 BuildArch:	noarch
+BuildSystem:	python
+BuildRequires:	pkgconfig(python3)
+BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(pip)
+BuildRequires:	python%{pyver}dist(wheel)
 
 %description
-The Ruffus module is a lightweight way to add support for running 
-computational pipelines.
-Computational pipelines are often conceptually quite simple, especially 
-if we breakdown the process into simple stages, or separate tasks.
-Each stage or task in a computational pipeline is represented by a 
-python function Each python function can be called in parallel to run 
-multiple jobs.
-Ruffus was originally designed for use in bioinformatics to analyse 
-multiple genome data sets.
+The Ruffus module is a lightweight way to add support for running
+computational pipelines. Each stage is a Python function, and each
+function can run several jobs in parallel.
 
+3.0.0 requires Python 3.11 or newer. Checkpoint history paths are
+relative to the database directory, and keyword-only defaults affect
+function checksums, so an existing pipeline reruns affected jobs once.
 
 %files
-%doc README.rst CHANGES.TXT
-%{py_puresitedir}/%{module}-%{version}-py%{py_ver}.egg-info
-%dir %{py_puresitedir}/%{module}
-%{py_puresitedir}/%{module}/*
-
-#--------------------------------------------------------------------
-
-%prep
-%setup -q -n ruffus-2.8.4
-
-%build
-
-%install
-%__rm -rf %{buildroot}
-%__python setup.py install --root=%{buildroot} --no-compile
-
+%doc README.rst CHANGES.TXT LICENSE.TXT
+%{py_puresitedir}/%{module}
+%{py_puresitedir}/%{module}-%{version}.dist-info
